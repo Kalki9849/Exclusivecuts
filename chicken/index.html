@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Cuts - Fresh Chicken Delivery</title>
+  <!-- Bootstrap CSS for responsive design -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar-brand img {
+      height: 40px;
+    }
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("exclusive-cuts-banner.jpg") no-repeat center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .product-card {
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .order-btn {
+      background-color: #28a745;
+      border: none;
+    }
+    .order-btn:hover {
+      background-color: #218838;
+    }
+    .contact-section {
+      background-color: #343a40;
+      color: white;
+      padding: 50px 0;
+    }
+    .form-section {
+      padding: 50px 0;
+    }
+    .phonepe-btn {
+      background-color: #5f259f;
+      color: white;
+      border: none;
+    }
+    .phonepe-btn:hover {
+      background-color: #4b1c7d;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="exclusive-cuts-logo.png" alt="Exclusive Cuts Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#order">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <h1>Exclusive Cuts</h1>
+      <p>Fresh Boneless Chicken Delivered in Jangareddygudem!</p>
+      <a href="#order" class="btn btn-light btn-lg">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Products</h2>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="card product-card">
+            <img src="chicken-boneless-1kg.jpg" class="card-img-top" alt="Chicken Boneless 1kg">
+            <div class="card-body text-center">
+              <h5 class="card-title">Chicken Boneless 1kg</h5>
+              <p class="card-text">₹449</p>
+              <a href="#order" class="btn order-btn text-white">Select</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="card product-card">
+            <img src="chicken-boneless-5kg.jpg" class="card-img-top" alt="Chicken Boneless 5kg">
+            <div class="card-body text-center">
+              <h5 class="card-title">Chicken Boneless 5kg</h5>
+              <p class="card-text">₹1049</p>
+              <a href="#order" class="btn order-btn text-white">Select</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order" class="form-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Place Your Order</h2>
+      <form id="orderForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="productSelect" class="form-label">Select Product</label>
+          <select class="form-select" id="productSelect" required>
+            <option value="" disabled selected>Choose a product</option>
+            <option value="Chicken Boneless 1kg - ₹449">Chicken Boneless 1kg - ₹449</option>
+            <option value="Chicken Boneless 5kg - ₹1049">Chicken Boneless 5kg - ₹1049</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phoneNumber" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+        </div>
+        <div class="col-md-12">
+          <label for="houseNo" class="form-label">House No/Flat No</label>
+          <input type="text" class="form-control" id="houseNo" placeholder="Enter House or Flat No" required>
+        </div>
+        <div class="col-md-12">
+          <label for="street" class="form-label">Street</label>
+          <input type="text" class="form-control" id="street" placeholder="Enter Street Name" required>
+        </div>
+        <div class="col-md-12">
+          <label for="area" class="form-label">Area</label>
+          <input type="text" class="form-control" id="area" placeholder="Enter Area" required>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label">City</label>
+          <input type="text" class="form-control" value="Jangareddygudem" disabled>
+        </div>
+        <div class="col-12 text-center">
+          <button type="button" class="btn phonepe-btn btn-lg mt-3" onclick="processOrder()">Pay with PhonePe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Phone:</strong> +91 9849228841</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919849228841" class="text-white">Chat with us</a></p>
+          <p><strong>Email:</strong> exclusivecuts.in@gmail.com</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Address:</strong> Exclusive Cuts, Buttaigudem Road, Beside Trinetra Hospital, Jangareddygudem, Andhra Pradesh, India</p>
+          <p><strong>Delivery Hours:</strong> 24hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <!-- Custom JS for Order Processing -->
+  <script>
+    function processOrder() {
+      const product = document.getElementById('productSelect').value;
+      const phone = document.getElementById('phoneNumber').value;
+      const houseNo = document.getElementById('houseNo').value;
+      const street = document.getElementById('street').value;
+      const area = document.getElementById('area').value;
+      const city = 'Jangareddygudem';
+
+      if (!product || !phone || !houseNo || !street || !area) {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      if (!/^[0-9]{10}$/.test(phone)) {
+        alert('Please enter a valid 10-digit phone number!');
+        return;
+      }
+
+      const orderDetails = `Order: ${product}\nPhone: ${phone}\nAddress: ${houseNo}, ${street}, ${area}, ${city}`;
+      const amount = product.includes('1kg') ? 449 : 1049;
+
+      // Simulate PhonePe payment link (replace with actual PhonePe Business link)
+      const phonePeLink = `https://www.phonepe.com/business?amount=${amount}&order=${encodeURIComponent(orderDetails)}`;
+      window.location.href = phonePeLink;
+
+      // Send order details to WhatsApp
+      const whatsappMessage = `New Order:\n${orderDetails}`;
+      const whatsappLink = `https://wa.me/919849228841?text=${encodeURIComponent(whatsappMessage)}`;
+      setTimeout(() => {
+        window.open(whatsappLink, '_blank');
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
